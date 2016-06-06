@@ -1,9 +1,10 @@
 var resizeBrandLogos = (function() {
 	var brandElements	//reference to the brand logos
+	var timeout
 
 	$(document).ready(function() {
-		brandElements = $('.brand')
-		resizeBrandElements()
+		brandElements = $('.ka-mini-market .branded')
+		setTimeout(resizeBrandElements, 300)
 	})
 
 	$(window).resize(function() {
@@ -13,6 +14,9 @@ var resizeBrandLogos = (function() {
 	function resizeBrandElements() {
 		var width = brandElements.width()
 		if (width != 0) brandElements.height(width)
+		if (width == 0) {
+			timeout = setTimeout(resizeBrandElements, 300)
+		}
 	}
 })()
 
