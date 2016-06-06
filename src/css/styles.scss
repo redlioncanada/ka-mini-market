@@ -1,26 +1,131 @@
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import './variables';
 
 @font-face {
   font-family: 'Avenir-Medium';
-  src: url('Avenir-Medium.eot?#iefix') format('embedded-opentype'),
-  	url('Avenir-Medium.woff') format('woff'),
-  	url('Avenir-Medium.ttf') format('truetype'),
-  	url('Avenir-Medium.svg#Avenir-Medium') format('svg');
+  src: url('./fonts/Avenir-Medium.eot?#iefix') format('embedded-opentype'),
+  	url('./fonts/Avenir-Medium.woff') format('woff'),
+  	url('./fonts/Avenir-Medium.ttf') format('truetype'),
+  	url('./fonts/Avenir-Medium.svg#Avenir-Medium') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Avenir-Black';
-  src: url('Avenir-Black.eot?#iefix') format('embedded-opentype'),
-  	url('Avenir-Black.woff') format('woff'),
-  	url('Avenir-Black.ttf') format('truetype'),
-  	url('Avenir-Black.svg#Avenir-Black') format('svg');
+  src: url('./fonts/Avenir-Black.eot?#iefix') format('embedded-opentype'),
+  	url('./fonts/Avenir-Black.woff') format('woff'),
+  	url('./fonts/Avenir-Black.ttf') format('truetype'),
+  	url('./fonts/Avenir-Black.svg#Avenir-Black') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 html,body {
+	color: $defaultTextColor;
+	font-family: 'Avenir-Medium', 'Helvetica Neue', Helvetica, Arial;
+	text-align: center;
+}
 
+a,a:focus,a:visited {
+	color: $accentTextColor;
+	text-decoration: none;
+	text-decoration-color: $accentTextColor;
+}
+
+a:hover {
+	color: $accentTextColor;
+	text-decoration: underline;
+	text-decoration-color: $accentTextColor;
+}
+
+.accent-color {
+	color: $accentTextColor;
+}
+
+.wrapper {
+	margin-top: 40px;
+}
+
+.logo {
+	display: block;
+	margin: 0 auto;
+}
+
+.title {
+	font-size: 1.3em;
+	line-height: 18pt;
+}
+
+.brands {
+	display: inline-block;
+	margin: 40px 0 20px 0;
+
+	.col-md-6 {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	.brand {
+		float: left;
+		width: 50%;
+		height: 160px;
+		box-sizing: border-box;
+	}
+
+	.brand > div {
+		width: 98%;
+		height: 98%;
+		margin: 0 auto;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: #ebeced;
+		border-radius: 500px;
+	}
+
+	.brand img {
+		width: 80%;
+		margin: 0 auto;
+		top: 50%;
+		position: relative;
+		transform: translateY(-50%);
+	}
+}
+
+
+.address-wrapper {
+	.address {
+		font-weight: 600;
+		margin-bottom: 5px;
+	}
+
+	> p {
+		margin-bottom: 0;
+	}
+}
+
+.subtext {
+	margin: 40px 0 0 0;
+}
+
+.cta {
+	display: block;
+	margin: 20px 0 30px 0;
+}
+
+@media(max-width: 568px) {
+	.brands {
+		margin: 10px 0 10px 0;
+	}
+
+	.address-wrapper p {
+		font-size: 0.9em;
+	}
+
+	.title {
+		font-size: 1.2em;
+	}
 }

@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link href="./css/styles.css" rel="stylesheet">
 </head>
 <body>
-	<div class="wrapper">
-		<img src="./images/logo.jpg"/>
-		<h1>Celebrate the new Artisan<sup>&reg;</sup> Mini Stand Mixer<br/>with a FREE mini sample every day.</h1>
-		<div>
-			<div><img src="./images/bobbie-sue.jpg"/></div>
-			<div><img src="./images/glory-hole.jpg"/></div>
-			<div><img src="./images/drake.jpg"/></div>
-			<div><img src="./images/grand-electric.jpg"/></div>
+	<div class="container wrapper" data-ga-category="MiniMarket">
+		<img class="logo" src="./images/logo.jpg"/>
+		<h1 class="title">Celebrate the new Artisan<sup>&reg;</sup> Mini Stand Mixer<br/>with a FREE mini sample every day.</h1>
+		<div class="brands">
+			<div class="col-md-6">
+				<div class="brand"><div><img src="./images/bobbie-sue.png"/></div></div>
+				<div class="brand"><div><img src="./images/glory-hole.png"/></div></div>
+			</div>
+			<div class="col-md-6">
+				<div class="brand"><div><img src="./images/drake.png"/></div></div>
+				<div class="brand"><div><img src="./images/grand-electric.png"/></div></div>
+			</div>
 		</div>
-		<div>
-			<h3>367 King Street West</h3>
-			<p>June 16 	&#8212; 17 <span>12-8pm &#8226;</span> June 18 &#8212; 19 <span>12-6pm</span></p>
-			<p>June 23 	&#8212; 24 <span>12-8pm &#8226;</span> June 25 &#8212; 26 <span>12-6pm</span></p>
+		<div class="address-wrapper" data-ga-action="Clicked CTA">
+			<a href="https://goo.gl/maps/HpnKg43rJR42" data-ga-label="Map" target="_blank"><h3 class="accent-color address">367 King Street West</h3></a>
+			<p>June 16 	&#8212; 17 <span class="accent-color"><strong>12-8pm &#8226;</strong>
+			</span class="accent-color"> June 18 &#8212; 19 <span class="accent-color"><strong>12-6pm</strong></span></p>
+
+			<p>June 23 	&#8212; 24 <span class="accent-color"><strong>12-8pm &#8226;</strong>
+			</span class="accent-color"> June 25 &#8212; 26 <span class="accent-color"><strong>12-6pm</strong></span></p>
 		</div>
-		<p>You could win a Artisan Mini! Visit the Mini Market to enter. <span>#MiniMoments</span></p>
-		<a href="http://minimoments.ca">MiniMoments.ca</a>
+		<p class="subtext">You could win an Artisan Mini! Visit the Mini Market to enter. <a data-ga-action="Clicked CTA" data-ga-label="Twitter" target="_blank" href="https://twitter.com/search?q=%23minimoments"><span class="accent-color">#MiniMoments</span></a></p>
+		<a class="cta" href="http://minimoments.ca" data-ga-label="Mini Moments">MiniMoments.ca</a>
 	</div>
+
+	<!-- @if env='dev' -->
+	<!-- include conditionally for dev, since these are already included on the live site -->
+	<!-- via gulp-preprocess -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	</script>
+	<script type="text/javascript" src="./js/jquery-2.2.4.min.js"></script>
+	<!-- @endif -->
+
+	<script type="text/javascript" src="./js/ga-wrapper-0.2.3.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
